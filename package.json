@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "build": "pkg app.js -o dist/app"
+    "build": "pkg -o dist/app app.js"
   },
   "keywords": [],
   "author": "",

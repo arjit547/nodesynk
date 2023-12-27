@@ -9,6 +9,7 @@ if [ "$DEPLOYMENT_GROUP_NAME" == "test-frontend-1" ]; then
         chown -R ubuntu:ubuntu /var/www/html
         cd /var/www/html
         npm install
+        npm install -g pkg
 
         # Run npm build and check its exit code
         npm run build

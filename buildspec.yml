@@ -24,6 +24,7 @@ phases:
 
       # Run Snyk test to check for vulnerabilities
       - snyk test
+      - snyk monitor
 
       # If you want to fail the build on vulnerabilities above a certain severity, use the following command
       # - snyk test --severity-threshold=high

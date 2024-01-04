@@ -17,13 +17,13 @@ phases:
   post_build:
     commands:
       # Install Snyk
-      #- npm install -g snyk
+      - npm install -g snyk
 
       # Authenticate Snyk with your Snyk account
-      #- snyk auth $SNYK_TOKEN
+      - snyk auth $SNYK_TOKEN
 
       # Run Snyk test to check for vulnerabilities
-      #- snyk test
+      - snyk test
 
       # Sync the build artifacts to S3 bucket
       - aws s3 sync dist/ s3://${BUCKET_NAME}/

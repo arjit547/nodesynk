@@ -10,7 +10,7 @@ phases:
       - npm install
 
   build:
-    commands:
+    commands:                                                               #this is for nodejs
       - npm install -g pkg
       - npm run build
 
@@ -24,6 +24,9 @@ phases:
 
       # Run Snyk test to check for vulnerabilities
       - snyk test
+
+      # If you want to fail the build on vulnerabilities above a certain severity, use the following command
+      # - snyk test --severity-threshold=high
 
       # Sync the build artifacts to S3 bucket
       - aws s3 sync dist/ s3://${BUCKET_NAME}/

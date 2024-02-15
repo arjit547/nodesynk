@@ -21,12 +21,7 @@ phases:
   post_build:
     commands:
       # SonarCloud analysis
-      - sonar-scanner \
-          -Dsonar.projectKey=arjit547_nodesynk \
-          -Dsonar.organization=arjit547 \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_LOGIN} \
-          -Dsonar.qualitygate.wait=true  # Fail the build if quality gate is not met
+      - sonar-scanner -Dsonar.projectKey=arjit547_nodesynk -Dsonar.organization=arjit547 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_LOGIN} -Dsonar.qualitygate.wait=true
 
 artifacts:
   files: '**/*'

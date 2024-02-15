@@ -28,9 +28,6 @@ phases:
           -Dsonar.login=${SONAR_LOGIN} \
           -Dsonar.qualitygate.wait=true  # Fail the build if quality gate is not met
 
-      # Continue with AWS CodeBuild steps (e.g., deploying artifacts)
-      #- aws s3 sync build/ s3://${BUCKET_NAME}
-
 artifacts:
   files: '**/*'
   base-directory: build

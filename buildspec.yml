@@ -21,7 +21,12 @@ phases:
   post_build:
     commands:
       # SonarCloud analysis
-      - sonar-scanner -Dsonar.projectKey=arjit547_nodesynk -Dsonar.organization=arjit547 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${SONAR_LOGIN}
+      - sonar-scanner \
+          -Dsonar.projectKey=arjit547_nodesynk \
+          -Dsonar.organization=arjit547 \
+          -Dsonar.host.url=https://sonarcloud.io \
+          -Dsonar.login=${SONAR_LOGIN} \
+          -Dsonar.qualitygate.wait=true  # Fail the build if quality gate is not met
 
       # Continue with AWS CodeBuild steps (e.g., deploying artifacts)
       #- aws s3 sync build/ s3://${BUCKET_NAME}
@@ -30,5 +35,3 @@ artifacts:
   files: '**/*'
   base-directory: build
   discard-paths: yes
-
-#analysis method disable in sonarqube

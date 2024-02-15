@@ -2,16 +2,16 @@
   "name": "nodesynk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  #"main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    #"start": "node app.js",
     "build": "pkg -o dist/app app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    #"express": "^4.18.2"
   },
   "devDependencies": {
     "pkg": "^5.8.1"

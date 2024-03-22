@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$DEPLOYMENT_GROUP_NAME" == "nodesymk" ]; then
+if [ "$DEPLOYMENT_GROUP_NAME" == "arjit-group" ]; then
     if [ -e /home/my-temp-dir/.env ]; then
         echo "Waiting for 2 minutes...."
         sleep 120

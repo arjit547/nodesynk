@@ -54,6 +54,6 @@ if [ "$DEPLOYMENT_GROUP_NAME" == "testnode" ]; then
     pm2 start app.js --name node-app
     pm2 save
 
-    sudo systemctl reload nginx
+    systemctl reload nginx
     echo "Backend deployment completed."
 fi
